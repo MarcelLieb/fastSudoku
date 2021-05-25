@@ -192,7 +192,7 @@ int nextSpace(Numbermatrix *m, int level)
 void BranchAndBound (Numbermatrix *m, int level)
 {
     if(level == m->size * m->size) {
-        //printMatrix(m);
+        printMatrix(m);
     }
     else {
         int i, x, y;
