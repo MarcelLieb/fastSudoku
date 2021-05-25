@@ -117,30 +117,6 @@ int istEinzigeMoeglichkeit(Numbermatrix *m, int x, int y, int Wert)
 {
     if(!istEinzige(m, x, y, Wert)) return 0;
     return istEinzigeMoeglichkeitReihe(m, x, y, Wert) || istEinzigeMoeglichkeitSpalte(m, x, y, Wert) || istEinzigeMoeglichkeitQuadrat(m, getQuadrat(x, y), getPosQuadrat(x, y), Wert);
-    /*
-    int i;
-    if(!istEinzige(m, x, y, Wert)) return 0;
-
-    for(i = 0; i < 9; i++) {
-        if(!(m->FelderReihe[y] >> i) && i != x && istEinzige(m, i, y, Wert)) {
-            break;
-        }
-    }
-    if (i == 9) return 1;
-    for(i = 0; i < 9; i++) {
-        if(!(m->FelderSpalte[x] >> i) && i != y && istEinzige(m, x, i, Wert)) {
-            break;
-        }
-    }
-    if (i == 9) return 1;
-    for(i = 0; i < 9; i++) {
-        if(!(m->FelderQuadrat[getQuadrat(x, y)] >> i) && i != getPosQuadrat(x, y) && istEinzige(m, getPosQuadrat(i, getQuadrat(x, y)), getQuadrat(i, getQuadrat(x, y)), Wert)) {
-            break;
-        }
-    }
-    if (i == 9) return 1;
-    return 0;
-    */
 }
 
 /*
